@@ -61,3 +61,5 @@ crashlytics-build.properties
 # keystore file
 *.keystore
 
+# bfg
+bfg-1.14.0.jar
