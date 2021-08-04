@@ -95,8 +95,8 @@ using Photon.Realtime;
 #### [채팅방 구현]
 PV.RPC의 사용 예시를 설명하기 위해 채팅방 구현에 적용한다.
 
-채팅방 UI
-![Image](../SampleApp/App_Photon_1/Picture/ChattingRoomUI.png)
+채팅방 UI  
+![Image](../SampleApp/App_Photon_1/Picture/ChattingRoomUI.png)  
 * ScrollView 내부에 여러개의 Text를 배치한다.
 * Input Field 와 Button을 배치하여 입력과 전송에 이용하도록 한다.
 
