@@ -54,6 +54,8 @@ using Photon.Realtime;
 ### [로비/방 연결]
 
 ```C#
+    //로비 연결
+    public void JoinLobby() => PhotonNetwork.JoinLobby();
 
     //방만들기 : 방 이름, 최대 플레이어 수를 매개변수로 받는다.
     public void CreateRoom() => PhotonNetwork.CreateRoom(roomInput.text, new RoomOptions { MaxPlayers = 2 });
@@ -71,6 +73,7 @@ using Photon.Realtime;
     public void LeaveRoom() => PhotonNetwork.LeaveRoom();
 
     //콜백 함수들
+    public override void OnJoinedLobby() => print("로비접속완료");
     public override void OnCreatedRoom() => print("방만들기완료");
     public override void OnJoinedRoom() => print("방참가완료");
     public override void OnCreateRoomFailed(short returnCode, string message) => print("방만들기실패");
@@ -93,7 +96,7 @@ using Photon.Realtime;
 PV.RPC의 사용 예시를 설명하기 위해 채팅방 구현에 적용한다.
 
 채팅방 UI
-![Image](../SampleApp/Pun2 Test/Picture/채팅방UI.png)
+![Image](../SampleApp/App_Photon_1/Picture/ChattingRoomUI.png)
 * ScrollView 내부에 여러개의 Text를 배치한다.
 * Input Field 와 Button을 배치하여 입력과 전송에 이용하도록 한다.
 
