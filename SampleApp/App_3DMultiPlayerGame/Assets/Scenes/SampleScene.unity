@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5fa8bb42414bb4285b5cb1b8df9296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuName: room
+  menuName: error
   open: 0
 --- !u!224 &418026678
 RectTransform:
@@ -1067,13 +1067,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2014331755}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: OpenMenu
-        m_Mode: 2
+      - m_Target: {fileID: 2014331754}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: LeaveRoom
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1034877555}
-          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3311,6 +3311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNameInputField: {fileID: 1087012293}
   errorText: {fileID: 156233960}
+  roomNameText: {fileID: 1599909585}
 --- !u!114 &2014331755
 MonoBehaviour:
   m_ObjectHideFlags: 0
