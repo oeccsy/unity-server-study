@@ -7,6 +7,7 @@ using TMPro;
 public class Launcher : MonoBehaviourPunCallbacks
 {
     [SerializeField] TMP_InputField roomNameInputField;
+    [SerializeField] TMP_Text errorText;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,5 +41,11 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loading");
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message) //방만들기 실패시 호출됨
+    {
+        errorText.text = "Room Createion Failed: " + message;
+        MenuManager.Instance.OpenMenu("error");
     }
 }
