@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using System.Linq;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -12,6 +13,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] TMP_Text roomNameText;
     [SerializeField] Transform roomListContent;
     [SerializeField] GameObject roomListItemPrefab;
+    [SerializeField] Transform playerListContent;
+    [SerializeField] GameObject playerListItemPrefab;
+    [SerializeField] GameObject startGameButton;
     // Start is called before the first frame update
 
     public static Launcher Instance; //이 스크립트를 메서드로 사용하기 위해 선언
@@ -36,12 +40,16 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to master");
         PhotonNetwork.JoinLobby();
+
+        PhotonNetwork.AutomaticallySyncScene = true; //자동으로 모든 사람들의 scene을 통일 시켜준다.
     }
 
     public override void OnJoinedLobby()
     {
         MenuManager.Instance.OpenMenu("title"); //로비에 들어오면 타이틀 메뉴를 켠다.
         Debug.Log("Joined Lobby");
+        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
+        //들어온 사람 이름을 랜덤으로 숫자를 붙여서 정해준다.
     }
 
     public void CreateRoom()
@@ -65,6 +73,29 @@ public class Launcher : MonoBehaviourPunCallbacks
         Debug.Log("asdf");
         MenuManager.Instance.OpenMenu("room");  //룸 메뉴를 연다.
         roomNameText.text = PhotonNetwork.CurrentRoom.Name; //들어간 방 이름
+
+        Player[] players = PhotonNetwork.PlayerList;
+        for (int i =0; i<players.Count(); i++)
+        {
+            Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
+            //방에 들어가면 방에 있는 사람 목록만큼 이름표가 뜨도록 한다.
+        }
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient); //방장만 게임시작 버튼을 누를 수 있다.
+    }
+
+    public override void OnMasterClientSwitched(Player newMasterClient)
+    {
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(1); //build의 scene번호 1을 뜻한다.
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
 
     public void LeaveRoom()
