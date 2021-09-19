@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    public static MenuManager Instance; //�ٸ�Ŭ�������� ȣ�� �����Ѥ�
+    public static MenuManager Instance; //�ٸ�Ŭ�������� ȣ�� �����Ѥ�
 
     [SerializeField] Menu[] menus;
 
@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
         {
             if(menus[i].menuName == menuName)
             {
-                OpenMenu(menus[i]);
+                menus[i].Open(); //불필요한 연산을 피하기 위함 굳이 바꾸지 않아도 작동에는 문제가 없음
             }
             else if(menus[i].open)
             {

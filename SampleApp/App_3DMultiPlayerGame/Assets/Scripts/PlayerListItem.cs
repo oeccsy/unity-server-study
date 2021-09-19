@@ -7,17 +7,17 @@ using TMPro;
 public class PlayerListItem : MonoBehaviourPunCallbacks
 {
     [SerializeField] TMP_Text text;
-    Player player; //Æ÷Åæ ¸®¾óÅ¸ÀÓÀÇ Player
+    Player player; //í¬í†¤ ë¦¬ì–¼íƒ€ì„ì˜ Player
 
     public void SetUp(Player _player)
     {
         player = _player;
-        text.text = _player.NickName; //ÇÃ·¹ÀÌ¾î ÀÌ¸§À» ¹Ş¾Æ¼­ ¶ç¿ìµµ·Ï ÇÔ
+        text.text = _player.NickName; //í”Œë ˆì´ì–´ ì´ë¦„ì„ ë°›ì•„ì„œ ë„ìš°ë„ë¡ í•¨
     }
 
-    public override void OnPlayerLeftRoom(Player otherPlayer) //ÇÃ·¹ÀÌ¾î°¡ ¹æÀ» ¶°³µÀ» ¶§ È£ÃâÇÑ´Ù.
+    public override void OnPlayerLeftRoom(Player otherPlayer) //í”Œë ˆì´ì–´ê°€ ë°©ì„ ë– ë‚¬ì„ ë•Œ í˜¸ì¶œí•œë‹¤.
     {
-        if(player == otherPlayer) // ³ª°£ ohterPlayer°¡ º»ÀÎÀÎ°æ¿ì
+        if(player == otherPlayer) // ë‚˜ê°„ ohterPlayerê°€ ë³¸ì¸ì¸ê²½ìš°
         {
             Destroy(gameObject);
         }

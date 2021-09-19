@@ -10,7 +10,7 @@ public class RoomListItem : MonoBehaviour
 
     public RoomInfo info; //포톤 리얼타임의 방정보 기능
 
-    public void SetUp(RoomInfo _info) //�������� �޾ƿ´�.
+    public void SetUp(RoomInfo _info)
     {
         info = _info;
         text.text = _info.Name;
@@ -18,6 +18,6 @@ public class RoomListItem : MonoBehaviour
 
     public void OnClick()
     {
-        Launcher.Instance.JoinRoom(info); //��ó ��ũ��Ʈ�� �޼���� JoinRoom ����
+        Launcher.Instance.JoinRoom(info);
     }
 }
