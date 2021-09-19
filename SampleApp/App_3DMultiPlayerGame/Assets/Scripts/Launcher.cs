@@ -21,7 +21,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 
     void Awake()
     {
-        Instance = this;//메서드로 사용
+        Instance = this;//이 스크립트를 메서드로 사용
     }
     void Start()
     {
@@ -84,7 +84,7 @@ public class Launcher : MonoBehaviourPunCallbacks//다른 포톤 반응 받아�
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(1);//1인 이유는 빌드에서 scene 번호가 1번씩이기 때문이다. 0은 초기 씬.
+        PhotonNetwork.LoadLevel(1); //build의 scene번호 1을 뜻한다.
     }
 
     public void LeaveRoom()
