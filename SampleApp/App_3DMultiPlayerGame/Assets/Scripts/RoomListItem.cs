@@ -8,9 +8,9 @@ public class RoomListItem : MonoBehaviour
 {
     [SerializeField] TMP_Text text;
 
-    RoomInfo info; //Æ÷Åæ ¸®¾óÅ¸ÀÓÀÇ ¹æÁ¤º¸ ±â´É
+    public RoomInfo info; //í¬í†¤ ë¦¬ì–¼íƒ€ì„ì˜ ë°©ì •ë³´ ê¸°ëŠ¥
 
-    public void SetUp(RoomInfo _info) //¹æÁ¤º¸¸¦ ¹Ş¾Æ¿Â´Ù.
+    public void SetUp(RoomInfo _info) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ş¾Æ¿Â´ï¿½.
     {
         info = _info;
         text.text = _info.Name;
@@ -18,6 +18,6 @@ public class RoomListItem : MonoBehaviour
 
     public void OnClick()
     {
-        Launcher.Instance.JoinRoom(info); //·±Ã³ ½ºÅ©¸³Æ®·Î ¸Ş¼­µå·Î JoinRoom ½ÇÇà
+        Launcher.Instance.JoinRoom(info); //ï¿½ï¿½Ã³ ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½ï¿½ JoinRoom ï¿½ï¿½ï¿½ï¿½
     }
 }
