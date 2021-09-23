@@ -146,6 +146,10 @@ PV.RPC의 사용 예시를 설명하기 위해 채팅방 구현에 적용한다.
 - `PhotonNetwork.IsMasterClient;` //마스터 클라이언트인 경우 true값 return
 - `public override void OnMasterClientSwitched(Player newMasterClient) {}` //방장이 나가서 방장이 바뀌었을때 호출되는 callback함수
 - `RoomInfo info;` //포톤 리얼타임의 방정보
+- `PhotonNetwork.AutomaticallySyncScene = true;` //scene 동기화 설정 (마스터 클라이언트가 LoadLevel()로 이동시 해당 scene으로 같이 이동)
+- `PhotonNetwork.LoadLevel(3);` //3번 씬으로 이동
 ### [참고링크]
 * https://www.youtube.com/watch?v=mPCNTi3Booo&list=PL3KKSXoBRRW3YE4UMnRH762vOhSHLdnpK&index=1&t=2s
 * https://www.youtube.com/watch?v=a6MquH2NPRE&list=PL3KKSXoBRRW3YE4UMnRH762vOhSHLdnpK&index=2
+* https://wikidocs.net/book/5575
+* https://icechou.tistory.com/305?category=296908 
