@@ -1,21 +1,22 @@
-# Google Spread Sheet ¿¬µ¿
+# Google Spread Sheet ì—°ë™
 
-À¯´ÏÆ¼¿¡ Google Spread Sheet¸¦ ¿¬µ¿ÇÏ¿© »ç¿ëÇÏ´Â ¹æ¹ýÀ» ¾Ë¾Æº¸¾Ò´Ù.
+ìœ ë‹ˆí‹°ì— Google Spread Sheetë¥¼ ì—°ë™í•˜ì—¬ ì‚¬ìš©í•˜ëŠ” ë°©ë²•ì„ ì•Œì•„ë³´ì•˜ë‹¤.
 
-## URL ¸µÅ© ÀÌ¿ë
+## URL ë§í¬ ì´ìš©
 
-### ÅÇÀ¸·Î ±¸ºÐµÈ °ª ºÒ·¯¿À±â
+### íƒ­ìœ¼ë¡œ êµ¬ë¶„ëœ ê°’ ë¶ˆëŸ¬ì˜¤ê¸° (tsv)
 
-À¯´ÏÆ¼¿¡¼­ ±¸±Û ½ÃÆ®¸¦ ÀÌ¿ëÇÏ±â À§ÇØ¼­ ÅÇÀ¸·Î ±¸ºÐµÈ °ªÀ» ´Ù¿î·Îµå ÇÏ¿© »ç¿ëÇÑ´Ù.  
+ìœ ë‹ˆí‹°ì—ì„œ êµ¬ê¸€ ì‹œíŠ¸ë¥¼ ì´ìš©í•˜ê¸° ìœ„í•´ì„œ íƒ­ìœ¼ë¡œ êµ¬ë¶„ëœ ê°’ì„ ë‹¤ìš´ë¡œë“œ í•˜ì—¬ ì‚¬ìš©í•œë‹¤.  
 <br>  
-½ºÇÁ·¹µå½ÃÆ®¸¦ `¸µÅ©°¡ ÀÖ´Â ¸ðµç »ç¿ëÀÚ¿¡°Ô °ø°³` ·Î ÀüÈ¯ÇÑ ÈÄ URLÀ» °¡Á®¿Â´Ù.  
-°¡Á®¿Â URLÀÇ ³¡ ºÎºÐÀ» `/edit#gid=0` ´ë½Å `/export?format=tsv`¸¦ ºÙ¿©ÁØ´Ù.  
+ìŠ¤í”„ë ˆë“œì‹œíŠ¸ë¥¼ `ë§í¬ê°€ ìžˆëŠ” ëª¨ë“  ì‚¬ìš©ìžì—ê²Œ ê³µê°œ` ë¡œ ì „í™˜í•œ í›„ URLì„ ê°€ì ¸ì˜¨ë‹¤.  
+ê°€ì ¸ì˜¨ URLì˜ ë ë¶€ë¶„ì„ `/edit#gid=0` ëŒ€ì‹  `/export?format=tsv`ë¥¼ ë¶™ì—¬ì¤€ë‹¤.  
 <br>
-¿¹¸¦µé¾î¼­,  
-ÀÛ¼ºÁßÀÎ ½ºÇÁ·¹µå½ÃÆ®ÀÇ URLÀÌ `https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/edit#gid=0` ÀÎ °æ¿ì  
-`https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/export?format=tsv` ¸¦ °¡Á®¿Â´Ù.  
+ì˜ˆë¥¼ë“¤ì–´ì„œ,  
+ìž‘ì„±ì¤‘ì¸ ìŠ¤í”„ë ˆë“œì‹œíŠ¸ì˜ URLì´ `https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/edit#gid=0` ì¸ ê²½ìš°  
+`https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/export?format=tsv` ë¥¼ ê°€ì ¸ì˜¨ë‹¤.  
 <br>
-ÀÌ·¯¸é ÇØ´ç URLÀº ÅÇÀ¸·Î ±¸ºÐµÈ °ªÀ» ´Ù¿î·Îµå ÇÏ°Ô µÇ´Â URLÀÌ µÈ´Ù.
+ì´ëŸ¬ë©´ í•´ë‹¹ URLì€ íƒ­ìœ¼ë¡œ êµ¬ë¶„ëœ ê°’ì„ ë‹¤ìš´ë¡œë“œ í•˜ê²Œ ë˜ëŠ” URLì´ ëœë‹¤.
+ì•„ëž˜ ì½”ë“œëŠ” GET ë°©ì‹ê³¼ POST ë°©ì‹ì¤‘ GET ë°©ì‹ì˜ ì½”ë“œì´ë‹¤. 
 
 ```C#
     const string URL = "https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/export?format=tsv";
@@ -31,34 +32,34 @@
 ```
 ![Image](../SampleApp/App_SpreadSheet/Image/Sheet_1.png)
 ![Image2](../SampleApp/App_SpreadSheet/Image/Sheet_2.png)
-* SpreadSheet ³»¿ë ºÒ·¯¿À±â ¼º°ø!
+* SpreadSheet ë‚´ìš© ë¶ˆëŸ¬ì˜¤ê¸° ì„±ê³µ!
 
-### ¿øÇÏ´Â ¹üÀ§ÀÇ °ª ºÒ·¯¿À±â
+### ì›í•˜ëŠ” ë²”ìœ„ì˜ ê°’ ë¶ˆëŸ¬ì˜¤ê¸°
 
-`ÅÇÀ¸·Î ±¸ºÐµÈ °ª ºÒ·¯¿À±â` ¿¡¼­ »ç¿ëÇÑ URLÀÇ ³¡ºÎºÐ¿¡ ¹üÀ§¸¦ ÁöÁ¤ÇÑ´Ù.  
-¿¹¸¦µé¾î¼­, A2 ¼¿¿¡¼­ B4 ¼¿ ±îÁö¸¸ ºÒ·¯¿À°í ½ÍÀº °æ¿ì  
-URLÀÇ ³¡ºÎºÐ¿¡ `&range=A2:B4`¸¦ ÀÔ·ÂÇÑ´Ù.  
+`íƒ­ìœ¼ë¡œ êµ¬ë¶„ëœ ê°’ ë¶ˆëŸ¬ì˜¤ê¸°` ì—ì„œ ì‚¬ìš©í•œ URLì˜ ëë¶€ë¶„ì— ë²”ìœ„ë¥¼ ì§€ì •í•œë‹¤.  
+ì˜ˆë¥¼ë“¤ì–´ì„œ, A2 ì…€ì—ì„œ B4 ì…€ ê¹Œì§€ë§Œ ë¶ˆëŸ¬ì˜¤ê³  ì‹¶ì€ ê²½ìš°  
+URLì˜ ëë¶€ë¶„ì— `&range=A2:B4`ë¥¼ ìž…ë ¥í•œë‹¤.  
 `https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/export?format=tsv&range=A2:B4`
 
-## SpreadSheetÀÇ ½ºÅ©¸³Æ® ÆíÁý±â ÀÌ¿ë
+## SpreadSheetì˜ ìŠ¤í¬ë¦½íŠ¸ íŽ¸ì§‘ê¸° ì´ìš©
 
-### Script ÀÌ¿ë
+### Script ì´ìš©
 
-½ºÅ©¸³Æ®¸¦ ÅëÇØ sheet¿¡ Á¢±ÙÇÏ·Á°í ÇÏ´Â °æ¿ì ÀÛ¾÷ÁßÀÎ ½ÃÆ®ÀÇ ID¸¦ °¡Á®¿Â´Ù.
-ÀÛ¾÷ÁßÀÎ ½ÃÆ®ÀÇ URLÀÌ `https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/edit#gid=0` ÀÎ °æ¿ì
-ID´Â `19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4` ¿¡ ÇØ´çÇÑ´Ù.
+ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ sheetì— ì ‘ê·¼í•˜ë ¤ê³  í•˜ëŠ” ê²½ìš° ìž‘ì—…ì¤‘ì¸ ì‹œíŠ¸ì˜ IDë¥¼ ê°€ì ¸ì˜¨ë‹¤.
+ìž‘ì—…ì¤‘ì¸ ì‹œíŠ¸ì˜ URLì´ `https://docs.google.com/spreadsheets/d/19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4/edit#gid=0` ì¸ ê²½ìš°
+IDëŠ” `19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4` ì— í•´ë‹¹í•œë‹¤.
 
 ```gs
 var sheetId = SpreadsheetApp.openById("19fzcMGoB2JWbW75trJCH1G10k4Ffxgl6rW3LXio22X4");
-var sheet = sheetId.getSheets()[0];     //0¹øÂ° ½ÃÆ®ÀÇ Á¤º¸¸¦ ¾ò´Â´Ù.
+var sheet = sheetId.getSheets()[0];     //0ë²ˆì§¸ ì‹œíŠ¸ì˜ ì •ë³´ë¥¼ ì–»ëŠ”ë‹¤.
 
 function myFunction()
 {
-    sheet.getRange(2, 2).setValue("test");  //2Çà 3¿­¿¡ °ª »ðÀÔ
+    sheet.getRange(2, 2).setValue("test");  //2í–‰ 3ì—´ì— ê°’ ì‚½ìž…
 }
 ```
 
 
-### [Âü°í ¸µÅ©]
+### [ì°¸ê³  ë§í¬]
 
 * https://www.youtube.com/watch?v=3LxaTtLsC-w
